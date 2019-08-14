@@ -1,0 +1,12 @@
+@model List<Dictionary<string, object>>
+<div class="text-center">
+    <h1 class="display-4">Here are the awesome quotes!</h1>
+</div>
+<div>
+    @foreach(var x in Model)
+    {
+        <p>"@x["quote"]"</p>
+        <p>-@x["name"] at @x["created_at"]</p>
+        <hr>
+    }
+</div>

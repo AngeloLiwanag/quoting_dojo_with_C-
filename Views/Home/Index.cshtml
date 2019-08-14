@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model User
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to QuotingDojo</h1>
+    <form asp-action="quotes" asp-controller="Home" method="post">
+        <label asp-for="name">Your Name:</label>
+        <input asp-for="name" type="text">
+        <label asp-for="quote">Your Quote:</label>
+        <input asp-for="quote" type="text">
+        <button type="submit" class="btn btn-success btn-sm">Send Quote</button>
+    </form>
+    <a href="/quotes">
+        <button class="btn btn-warning btn-sm">See Quote</button>
+    </a>
+</div>
